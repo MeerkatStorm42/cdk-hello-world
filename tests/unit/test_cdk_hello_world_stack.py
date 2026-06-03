@@ -10,6 +10,6 @@ def test_sqs_queue_created():
     stack = CdkHelloWorldStack(app, "cdk-hello-world")
     template = assertions.Template.from_stack(stack)
 
-#     template.has_resource_properties("AWS::SQS::Queue", {
-#         "VisibilityTimeout": 300
-#     })
+    template.has_resource_properties("AWS::Lambda::Function", {
+        "timeout": 3
+    })
