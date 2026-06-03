@@ -64,6 +64,9 @@ jobs:
 
     
    steps:
+      - name: Set PYTHONPATH
+        run: export PYTHONPATH=$PWD
+
       - name: Checkout code
         uses: actions/checkout@v4
 
