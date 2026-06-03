@@ -11,5 +11,5 @@ def test_lambda_created():
     template = assertions.Template.from_stack(stack)
 
     template.has_resource_properties("AWS::Lambda::Function", {
-        "runtime": "nodejs20.x"
+        "handler": "hello.handler"
     })
