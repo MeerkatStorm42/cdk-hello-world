@@ -10,6 +10,4 @@ def test_lambda_created():
     stack = CdkHelloWorldStack(app, "cdk-hello-world")
     template = assertions.Template.from_stack(stack)
 
-    template.has_resource_properties("AWS::Lambda::Function", {
-        "handler": "hello.handler"
-    })
+    template.resource_count_is("Foo::Bar", 11)
