@@ -80,7 +80,7 @@ jobs:
       - name: Set PYTHONPATH
         run: |
           export PYTHONPATH=$PWD
-          print(PYTHONPATH)
+          $PWD
 
       - name: Build package
         run: |
