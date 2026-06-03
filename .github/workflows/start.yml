@@ -78,7 +78,9 @@ jobs:
           pip install build
 
       - name: Set PYTHONPATH
-        run: export PYTHONPATH=$PWD
+        run: |
+          export PYTHONPATH=$PWD
+          print PYTHONPATH
 
       - name: Build package
         run: |
