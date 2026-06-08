@@ -68,7 +68,6 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::***REMOVED***:role/github-cdk
           aws-region: eu-west-2
-      - run: npm run build
 
       - name: CDK Diff
         run: cdk diff
