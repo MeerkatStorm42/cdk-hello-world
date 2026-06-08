@@ -1,6 +1,11 @@
 name: python-ci-cd
 
 on:
+  workflow_run:
+    workflows: ["deploy"]
+    types:
+      - completed
+
   push:
     branches:
     - main
@@ -78,7 +83,4 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Use local action
-        uses: ./.github/workflows/deploy.yml
+        run: echo "linking to deploy.yml..."
