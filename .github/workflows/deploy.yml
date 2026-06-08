@@ -47,5 +47,4 @@ jobs:
 
             - name: cdk-deploy
               run: |
-                cdk --version
-                cdk deploy CdkHelloWorldStack
+                npx cdk deploy CdkHelloWorldStack
