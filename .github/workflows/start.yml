@@ -70,7 +70,7 @@ jobs:
           aws-region: eu-west-2
 
       - name: CDK Diff
-        run: cdk diff
+        run: cdk diff CdkHelloWorldStack
 
   deploy:
     runs-on: ubuntu-latest
