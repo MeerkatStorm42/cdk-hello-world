@@ -46,4 +46,4 @@ jobs:
                 aws-region: eu-west-2
 
             - name: cdk-deploy
-              run: npm run cdk deploy
+              run: cdk deploy CdkHelloWorldStack
