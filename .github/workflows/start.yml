@@ -56,17 +56,7 @@ jobs:
         run: |
           pytest
 
-      - name: Create artifact
+      - name: CDK Diff
         run: |
-          mkdir dist
-          cp -r src dist/
-          cp requirements.txt dist/ || true
-          cd dist
-          zip -r app.zip .
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: python-app
-          path: dist/app.zip
+          cdk deploy
 
