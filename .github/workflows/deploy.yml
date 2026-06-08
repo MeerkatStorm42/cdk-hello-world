@@ -1,7 +1,7 @@
 
 on:
   workflow_run:
-    workflows: ["start"]
+    workflows: ["python-ci-cd"]
     types:
       - completed
 
