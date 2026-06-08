@@ -15,5 +15,17 @@ jobs:
             - name: test
               run: echo "hello world"
 
+            - name: setup Node
+              uses: actions/setup-node@v4
+              with:
+                node-version: 20
+                run: npm install -g aws-cdk
+
+            - name: Configure AWS credentials
+              uses: aws-actions/configure-aws-credentials@v4
+              with:
+                role-to-assume: arn:aws:iam::***REMOVED***:role/github-cdk
+                aws-region: eu-west-2
+
             - name: cdk-deploy
               run: cdk deploy
