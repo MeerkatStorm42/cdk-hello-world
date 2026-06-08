@@ -1,0 +1,14 @@
+
+on:
+  workflow_run:
+    workflows: ["Python CI/CD"]
+    types:
+      - completed
+
+jobs:
+  cdk-deploy:
+    name: cdk-deploy
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: cdk deploy
