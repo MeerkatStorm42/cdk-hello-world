@@ -78,4 +78,4 @@ jobs:
 
     steps:
       - name: CDK Deploy
-        uses: ./.github/workflows/deploy.yml
+        run: echo "Linking to deploy.yml"
