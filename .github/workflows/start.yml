@@ -77,5 +77,8 @@ jobs:
     needs: [lint, diff]
 
     steps:
-      - name: CDK Deploy
-        run: echo "Linking to deploy.yml"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use local action
+        uses: ./.github/workflows/deploy.yml
