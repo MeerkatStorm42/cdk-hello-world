@@ -1,16 +1,11 @@
 name: python-ci-cd
 
 on:
-  workflow_run:
-    workflows: ["deploy"]
-    types:
-      - completed
-
-  push:
-    branches:
-    - main
-    - develop
-  pull_request:
+    push:
+      branches:
+      - main
+      - develop
+    pull_request:
 
 permissions:
   id-token: write
@@ -84,3 +79,4 @@ jobs:
     steps:
       - name: Checkout code
         run: echo "linking to deploy.yml..."
+
