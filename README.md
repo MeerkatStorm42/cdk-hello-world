@@ -4,5 +4,10 @@
 Originally, this example was from [HERE](https://docs.aws.amazon.com/cdk/v2/guide/serverless-example.html) .
 
 Then, I decided to add GitHub Actions to it.
-And, instead of ```cdk synth``` , I used the cycle of ```cdk diff``` and then ```cdk deploy``` .
-As from one workplace, I learnt that the ```diff``` step provides a more readable, truncated view than the JSON with ```synth``` (just imho, too).
+And, instead of `cdk synth` , I used the cycle of `cdk diff` and then `cdk deploy` .
+As from one workplace, I learnt that the `diff` step provides a more readable, truncated view than the JSON with `synth` (just imho, too).
+
+# To try it out.
+* ```git clone``` repo;
+* Go to Settings, add Repo Vars named exactly:
+    * `AWS_ACCOUNT_ID` - (add your own aws account number, recommend a sandbox, Dev account, obvs)
